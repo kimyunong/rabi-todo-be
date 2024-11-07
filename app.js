@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 const MONGODB_URI_PROD= process.env.MONGODB_URI_PROD;
 
-app.use(cors({origin: 'https://cerulean-alfajores-4beecc.netlify.app'}));
+app.use(cors({ origin:'*' }));
 app.use(bodyParser.json());
 app.use('/api',indexRouter);
 
